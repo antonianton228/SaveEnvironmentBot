@@ -9,11 +9,11 @@ from telebot.types import InputMediaPhoto
 from geopy.geocoders import Nominatim
 
 geolocator = Nominatim(timeout=10, user_agent = "myGeolocator")
-driver = ydb.Driver(database='/ru-central1/b1gu0fk83o7tkm6us2l3/etnbifd536hjt2dsdvdg', endpoint ='grpcs://ydb.serverless.yandexcloud.net:2135', credentials=ydb.iam.MetadataUrlCredentials())
+driver = ydb.Driver(database='YOURBASE', endpoint ='YOURENDPOINT', credentials=ydb.iam.MetadataUrlCredentials())
 
 driver.wait(fail_fast=True, timeout=5)
 pool = ydb.SessionPool(driver)
-bot = telebot.TeleBot("5318941676:AAE65AOZ11ylYJJmajr1PoJ2yM41xMpTVLo", parse_mode=None)
+bot = telebot.TeleBot("YOUR_KEY", parse_mode=None)
 id = ''
 cat = ''
 barcode = ''
